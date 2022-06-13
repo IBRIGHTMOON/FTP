@@ -1,0 +1,26 @@
+#pragma once
+
+#include <string>
+
+static const int FTP_PTHREAD_NUMBER = 10;
+
+static std::string SERVER_BIND_ADDRESS = "192.168.221.128";
+
+enum FTP_COMMAND
+{
+    FTP_COMMAND_USERNAME,
+    FTP_COMMAND_PASSWORD,
+    FTP_COMMAND_PASV,
+    FTP_COMMAND_RETR,
+    FTP_COMMAND_STOR,
+    FTP_COMMAND_PWD,
+    FTP_COMMAND_CWD,
+    FTP_COMMAND_SIZE,
+    FTP_COMMAND_LIST,
+    FTP_COMMAND_QUIT,
+    FTP_COMMAND_REST,
+    FTP_COMMAND_PORT
+};
+
+static const int MAX_LISTEN_NUMBER = 10;
+static const int MAX_EPOLL_NUMBER = 10;

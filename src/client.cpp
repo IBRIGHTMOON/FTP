@@ -25,8 +25,12 @@ int main(int argc, char *argv[])
         getline(std::cin, command);
 //        std::cout << command << std::endl;
         std::string::size_type idx = command.find_first_of(' ', 0);
-        argument = command.substr(idx + 1);
-        command = command.substr(0, idx);
+        if (idx != std::string::npos) 
+        {
+            argument = command.substr(idx + 1);
+            command = command.substr(0, idx);
+        }
+        
 
         std::cout << argument << std::endl;
 
